@@ -1,0 +1,48 @@
+body {
+}
+
+td, th {
+ border: 1px solid black;
+ padding: 2px 3px;
+}
+
+table {
+ border-collapse: collapse;
+}
+
+td.status, td.date {
+ text-align: center;
+}
+
+td.status {
+ width: 100px;
+}
+
+td.status.OK {
+ background-color: green;
+ color: white;
+}
+
+td.status.Unknown {
+ background-color: yellow;
+ color: black;
+}
+
+td.status.Warning, td.date.overdue {
+ background-color: orange;
+ color: black;
+}
+
+td.status.Critical, td.date.never {
+ background-color: red;
+ color: white;
+}
+
+.updated {
+ text-decoration: blink; 
+}
+
+td.output {
+ font-family: monospace;
+ font-style: italic;
+}

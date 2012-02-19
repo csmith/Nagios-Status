@@ -22,7 +22,9 @@
 
     // Close braces
     if ($tline[0] == '}') {
-     call_user_func(array(&$this, 'parse_' . $block), $lines);
+     if (method_exists(&$this, 'parse_' . $block)) {
+      call_user_func(array(&$this, 'parse_' . $block), $lines);
+     }
      continue;
     }
 
@@ -39,6 +41,6 @@
 
    $this->analyse();
   }
- } 
+ }
 
 ?>
